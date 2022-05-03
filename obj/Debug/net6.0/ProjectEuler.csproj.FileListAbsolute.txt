@@ -1,0 +1,15 @@
+/Users/emile/Documents/teachingProjects/ProjectEuler/bin/Debug/net6.0/ProjectEuler
+/Users/emile/Documents/teachingProjects/ProjectEuler/bin/Debug/net6.0/ProjectEuler.deps.json
+/Users/emile/Documents/teachingProjects/ProjectEuler/bin/Debug/net6.0/ProjectEuler.runtimeconfig.json
+/Users/emile/Documents/teachingProjects/ProjectEuler/bin/Debug/net6.0/ProjectEuler.dll
+/Users/emile/Documents/teachingProjects/ProjectEuler/bin/Debug/net6.0/ProjectEuler.pdb
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.csproj.AssemblyReference.cache
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.GeneratedMSBuildEditorConfig.editorconfig
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.AssemblyInfoInputs.cache
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.AssemblyInfo.cs
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.csproj.CoreCompileInputs.cache
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.dll
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/refint/ProjectEuler.dll
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.pdb
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ProjectEuler.genruntimeconfig.cache
+/Users/emile/Documents/teachingProjects/ProjectEuler/obj/Debug/net6.0/ref/ProjectEuler.dll
