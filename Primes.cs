@@ -2,61 +2,108 @@ namespace ProjectEuler
 {
     public static class Primes
     {
-        private static readonly HashSet<int> primes;
+        public static readonly HashSet<int> primes;
+        private static readonly HashSet<int> oddComposites;
+        private static int highestCached;
+        private static bool hasCached;
 
         static Primes()
         {
             primes = new HashSet<int> { 2, 3 };
+            oddComposites = new HashSet<int>();
+            hasCached = false;
+            highestCached = 3;
         }
 
-        public static bool IsPrime(int num)
+        public static bool IsPrimeCached(int number)
         {
+            if(!hasCached)
+            {
+                GeneratePrimesTo(number / 2 + 1);
+                return IsPrime(number);
+            }
             // If it's less than 2 or even it isn't prime
-            if (num < 2)
+            if (number < 2 || number % 2 == 0)
             {
                 return false;
             }
             // If we've already found it for a previous number it is prime
-            if (primes.Contains(num))
+            if (primes.Contains(number))
             {
                 return true;
             }
+            if (oddComposites.Contains(number))
+            {
+                return false;
+            }
+            if (DivisibleByPrime(number))
+            {
+                return false;
+            }
+
+            GeneratePrimesTo(number / 2);
+
+            if (DivisibleByPrime(number))
+            {
+                return false;
+            }
+
+            primes.Add(number);
+            return true;
+        }
+
+        private static bool DivisibleByPrime(int number)
+        {
             // We only need to check if it is divisibile by prime numbers since all composite numbers
             // are the product of some combination of primes, so first we check against all the primes we've already cached
             foreach (int prime in primes)
             {
-                if (num % prime == 0)
+                if (number % prime == 0)
                 {
-                    return false;
-                }
-                // If any of the primes are ever higher than our input, then our input is also prime
-                if (prime > num)
-                {
+                    oddComposites.Add(number);
                     return true;
                 }
             }
-            // Now we can start at the highest prime we've previously cached
-            int i = primes.Max();
-            // We only need to check for odds >= highestPrime because the modulus on line 28 will always include 2
-            while (i <= Math.Sqrt(num))
-            {
-                if (num % i == 0)
-                {
-                    return false;
-                }
-                i += 2;
-            }
-            primes.Add(num);
-            return true;
+            return false;
         }
-
-        public static HashSet<int> GenerateNPrimes(int limit)
+        public static void GeneratePrimesTo(int limit)
         {
-            for (int i = 5; i < limit; i += 2)
+            for (int i = highestCached; i < limit; i += 2)
             {
                 IsPrime(i);
             }
-            return primes;
+            highestCached = primes.Max();
+            hasCached = true;
+        }
+
+        public static bool IsPrime(int number)
+        {
+            if (number < 2)
+            {
+                return false;
+            }
+            if (number % 2 == 0)
+            {
+                return false;
+            }
+            if (primes.Contains(number))
+            {
+                return true;
+            }
+            if (oddComposites.Contains(number))
+            {
+                return false;
+            }
+            for (int i = 3; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0)
+                {
+                    oddComposites.Add(number);
+                    return false;
+                }
+            }
+            primes.Add(number);
+            return true;
         }
     }
 }

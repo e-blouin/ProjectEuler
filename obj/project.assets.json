@@ -8,21 +8,17 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/Users/emile/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/emile/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/emile/Documents/teachingProjects/ProjectEuler/ProjectEuler.csproj",
+      "projectUniqueName": "/Users/emile/development/ProjectEuler/ProjectEuler.csproj",
       "projectName": "ProjectEuler",
-      "projectPath": "/Users/emile/Documents/teachingProjects/ProjectEuler/ProjectEuler.csproj",
+      "projectPath": "/Users/emile/development/ProjectEuler/ProjectEuler.csproj",
       "packagesPath": "/Users/emile/.nuget/packages/",
-      "outputPath": "/Users/emile/Documents/teachingProjects/ProjectEuler/obj/",
+      "outputPath": "/Users/emile/development/ProjectEuler/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "/Users/emile/.nuget/NuGet/NuGet.Config"
       ],

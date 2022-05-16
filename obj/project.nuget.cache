@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gz3HWJtDiEUAMTw9FvUM+hg+oxeBMFkj6mIOexGcw4FKk7eB2zfF/+1BTS5wIZQ7DJNPmTSLPFly9VUMU9tKAw==",
+  "dgSpecHash": "4KL++fulmN4XsQePbt3qP0iu7Sd/l9YVhGp8VrVlBx8jWyWqbSRW8MhpWdqTUxafB8VsML1GdsHPu2TXY0JMsw==",
   "success": true,
-  "projectFilePath": "/Users/emile/Documents/teachingProjects/ProjectEuler/ProjectEuler.csproj",
+  "projectFilePath": "/Users/emile/development/ProjectEuler/ProjectEuler.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
