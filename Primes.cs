@@ -105,5 +105,21 @@ namespace ProjectEuler
             primes.Add(number);
             return true;
         }
+
+        public static HashSet<int> PrimePowerCubes(int a, int b, int c)
+        {
+            HashSet<int> cubes = new HashSet<int>();
+            if(!IsPrime(a) || !IsPrime(b) || !IsPrime(c))
+            {
+                return cubes;
+            }
+            cubes.Add((int)(Math.Pow(a,2) + Math.Pow(b,3) + Math.Pow(c,4)));
+            cubes.Add((int)(Math.Pow(a,2) + Math.Pow(c,3) + Math.Pow(b,4)));
+            cubes.Add((int)(Math.Pow(b,2) + Math.Pow(a,3) + Math.Pow(c,4)));
+            cubes.Add((int)(Math.Pow(b,2) + Math.Pow(c,3) + Math.Pow(a,4)));
+            cubes.Add((int)(Math.Pow(c,2) + Math.Pow(a,3) + Math.Pow(b,4)));
+            cubes.Add((int)(Math.Pow(c,2) + Math.Pow(b,3) + Math.Pow(a,4)));
+            return cubes;
+        }
     }
 }
